@@ -39,14 +39,15 @@ def baixaUm():
     print("começando...")
     # ys = yt.streams.filter(only_audio=True).first().download(path)
     ys = yt.streams.filter(only_audio=False).first().download(path)
-    ys = yt.streams.first().download(path)
+    print(ys.private)
+    # ys = yt.streams.first().download(path)
     print('Download concluído')
     print('Sucesso!')
 
 
 def main():
-    carregaUnico()
-    # baixaUm()
+    # carregaUnico()
+    baixaUm()
 
 if __name__ == "__main__":
     main()
